@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700;&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+<style>
+	* {
+		box-sizing: border-box;
+		outline: none;
+		margin: 0;
+		padding: 0;
+		color: white;
+		font-family: "Poppins", sans-serif;
+	}
+
+	body {
+		background: black;
+	}
+
+	.hidden {
+		display: none !important;
+	}
+</style>
+<link rel="stylesheet" href="./counter.css">
+<link rel="stylesheet" href="./list.css">
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+	<div class="counter-wrap">
+		<p class="counter" data-actual-count="0">0</p>
+	</div>
+
+	<div class="list-search">
+		<input type="text" id="listSearch">
+		<button class="clear-list-search">&times;</button>
+	</div>
+
+	<div class="list-wrap">
+
+		
+		<div class="list-item">
+			<div class="list-title">Stay active on teams powershell script</div>
+			<div class="list-description">Open powershell and paste script</div>
+			<div class="list-code">
+				<pre class="prettyprint">
+$WShell = New-Object -com "WScript.shell"
+while ($True)
+{
+$WShell.sendkeys("{SCROLLLOCK}")
+start-sleep -Milliseconds 100
+$WShell.sendkeys("{SCROLLLOCK}")
+start-sleep -Seconds 240
+} </pre>
+			</div>
+			<div class="list-keywords">teams active green always online powershell</div>
+		</div>
+
+
+	</div>
+
+	<script src="./counter.js"></script>
+	<script src="./list.js"></script>
+</body>
+</html>

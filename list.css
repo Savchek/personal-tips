@@ -1,0 +1,197 @@
+.list-search {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 40px;
+	width: fit-content;
+	position: relative;
+}
+
+.clear-list-search {
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	transform: translateY(-50%);
+	color: white;
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+	transition: 0.2s ease-out;
+	line-height: 1;
+	font-size: 2rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.clear-list-search:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.clear-list-search:active {
+	background: rgba(255, 255, 255, 0.7);
+}
+
+#listSearch {
+	width: 90vw;
+	max-width: 600px;
+	background: rgba(255, 255, 255, 0.1);
+	border: none;
+	outline: none;
+	font-size: 2rem;
+	border-radius: 1rem;
+	padding: 1rem 1.5rem;
+	transition: 1s ease-out;
+}
+
+#listSearch:focus {
+	background: rgba(255, 255, 255, 0.15);
+	box-shadow: 0 0 20rem 5rem rgba(255, 255, 255, 0.4);
+}
+
+#listSearch.active:focus {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+#listSearch.active + .clear-list-search {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.list-wrap {
+	max-width: 70vw;
+	margin: 0 auto;
+}
+
+.list-item {
+	margin-bottom: 1rem;
+	background: rgba(255, 255, 255, 0.2);
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+}
+
+.list-title {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.list-description {
+	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
+}
+
+.list-wrap pre,
+.list-wrap pre.prettyprint {
+	margin-bottom: 0.5rem;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	border: none;
+	background: #212121;
+	padding: 0.6rem 1rem;
+	transition: 0.1s ease-out;
+	font-family: "Inconsolata", monospace;
+}
+
+.list-wrap pre > * {
+	font-family: "Inconsolata", monospace;
+}
+
+pre.cut ~ .toggle-cut-btn {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2rem;
+	background: linear-gradient(to top, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+	border-radius: 0;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	transition: 0.2s ease-out;
+	writing-mode: sideways-rl;
+	font-size: 2rem;
+	line-height: 1;
+	border-radius: 0 0 0.5rem 0.5rem;
+	color: #818181;
+}
+
+pre.cut ~ .toggle-cut-btn:hover {
+	background: linear-gradient(to top, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+}
+
+pre.cut.opened ~ .toggle-cut-btn {
+	writing-mode: sideways-lr;
+}
+
+.list-keywords {
+	font-size: 0.7rem;
+	opacity: 0.3;
+}
+
+.list-code {
+	position: relative;
+}
+
+.list-wrap .copy-btn {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	width: 1.8rem;
+	height: 1.8rem;
+	transition: 0.2s ease-out;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 6px;
+	background: rgba(255,255,255,0.5);
+	opacity: 0.3;
+	font-size: 1.6rem;
+	line-height: 1;
+}
+
+.list-wrap .copy-btn.success {
+	background: rgba(173, 255, 162, 0.5);
+	color: rgb(173, 255, 162);
+}
+
+.list-wrap .copy-btn.error {
+	background: rgba(255, 191, 162, 0.5);
+	color: rgb(255, 191, 162);
+}
+
+.list-wrap .copy-btn:hover {
+	opacity: 0.6;
+}
+
+.list-wrap .copy-btn:active {
+	opacity: 0.9;
+}
+
+.list-wrap .copy-textarea {
+	height:0;
+	position:absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+/* code */
+/* desert scheme ported from vim to google prettify */
+pre.prettyprint { display: block; background-color: #333; }
+pre .nocode { background-color: none; color: #000 }
+pre .str { color: #c0e693 } /* string  - pink */
+pre .kwd { color: #a096e7 }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color: #bfca36 }    /* punctuation */
+pre .pln { color: #f2fef2 }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal         - lightgreen */

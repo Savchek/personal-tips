@@ -1,0 +1,15 @@
+.counter-wrap {
+	width: fit-content;
+	padding: 20px;
+}
+
+.counter {
+	font-size: 5rem;
+}
+
+.counter .s {
+	margin-left: 0.4rem;
+	opacity: 0.5;
+	font-size: 2.5rem;
+	font-family: 'Courier New', Courier, monospace;
+}
