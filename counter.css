@@ -1,6 +1,7 @@
 .counter-wrap {
 	width: fit-content;
 	padding: 20px;
+	display: none;
 }
 
 .counter {
