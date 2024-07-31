@@ -64,4 +64,4 @@ function initCounter() {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', initCounter)
+//document.addEventListener('DOMContentLoaded', initCounter)
