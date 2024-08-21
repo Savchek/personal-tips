@@ -67,6 +67,46 @@ start-sleep -Seconds 240
 			<div class="list-description">For deployment export ewizard page as SPA with external resources checked</div>
 			<div class="list-keywords">export spa ewizard landing</div>
 		</div>
+		
+		<div class="list-item">
+			<div class="list-title">Autoexport slides 1 by 1 from PowerPoint</div>
+			<div class="list-description">Script for AutoHotkey v2</div>
+			<div class="list-code">
+				<pre>; Press Ctrl + 1 to start the script
+^1::
+{
+	Loop
+	{
+		; 55 slides
+		if (A_Index > 55)
+			break
+		; Skip 0, to start from 1
+		if (A_Index == 0)
+			continue
+		
+		Sleep 200
+		Send "!f"
+		Sleep 200
+		Send "e"
+		Sleep 200
+		Send "c"
+		Sleep 200
+		Send "j"
+		Sleep 200
+		Send "a"
+		Sleep 500
+		Send "slide_name_" A_Index
+		Sleep 500
+		Send "{Enter}"
+		Sleep 500
+		Send "j"
+		Sleep 500
+		Send "{Down}"
+	}
+}</pre>
+			</div>
+			<div class="list-keywords">powerpoint export slides</div>
+		</div>
 
 
 	</div>
